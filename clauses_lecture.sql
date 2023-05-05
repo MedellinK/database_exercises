@@ -13,3 +13,15 @@ SELECT emp_no, first_name, last_name FROM employees WHERE emp_no < 20000
                                                        OR first_name = 'Shridhar';
 
 SELECT * FROM salaries WHERE salary NOT BETWEEN 50000 AND 100000;
+
+# Functions
+
+SELECT CONCAT(first_name,' ',last_name) FROM employees WHERE first_name = 'Maya';
+
+SELECT DAYOFMONTH(hire_date) FROM employees WHERE first_name = 'Maya';
+
+SELECT DATEDIFF(NOW(),hire_date)/365 FROM employees LIMIT 10;
+
+SELECT last_name FROM employees GROUP BY last_name;
+
+SELECT COUNT(first_name) FROM employees;
